@@ -1,0 +1,215 @@
+[gd_scene load_steps=14 format=3 uid="uid://bypyov30n11m4"]
+
+[ext_resource type="PackedScene" uid="uid://dp50cshy56ljn" path="res://Scenes/leaderboard_scene.tscn" id="1_eg2si"]
+[ext_resource type="Script" uid="uid://6bmi2tnuqwyw" path="res://Scripts/main_menu.gd" id="1_ny0h3"]
+[ext_resource type="Texture2D" uid="uid://boucnp5h3s13p" path="res://Asetts/pixel_art_celestial_animation.png" id="1_xgjhp"]
+[ext_resource type="Script" uid="uid://bbcxex1bch00a" path="res://Scripts/play_button.gd" id="3_4egra"]
+[ext_resource type="Script" uid="uid://bvthbg5h8l3b7" path="res://Scripts/quit_button.gd" id="3_8jsu8"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iqwyw"]
+texture = ExtResource("1_xgjhp")
+modulate_color = Color(0.262932, 0.262932, 0.262933, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fymoi"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xcmgw"]
+bg_color = Color(0.783523, 0.783523, 0.783523, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xjkfb"]
+bg_color = Color(0.454524, 0.454524, 0.454524, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_476f4"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="Animation" id="Animation_n45e2"]
+resource_name = "Fade_to_Normal"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:layer")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.03, 0.94),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [1, -1]
+}
+
+[sub_resource type="Animation" id="Animation_opfnp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:layer")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_opfnp"]
+_data = {
+&"Fade_to_Normal": SubResource("Animation_n45e2"),
+&"RESET": SubResource("Animation_opfnp")
+}
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ny0h3")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_iqwyw")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.65
+anchor_right = 0.502
+anchor_bottom = 0.65
+offset_left = -187.0
+offset_top = -174.2
+offset_right = 184.696
+offset_bottom = 124.8
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 25
+
+[node name="playButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 60
+theme_override_styles/focus = SubResource("StyleBoxEmpty_fymoi")
+theme_override_styles/hover = SubResource("StyleBoxFlat_xcmgw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xjkfb")
+theme_override_styles/normal = SubResource("StyleBoxFlat_476f4")
+text = "Play"
+script = ExtResource("3_4egra")
+
+[node name="leaderboardButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 55
+theme_override_styles/focus = SubResource("StyleBoxEmpty_fymoi")
+theme_override_styles/hover = SubResource("StyleBoxFlat_xcmgw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xjkfb")
+theme_override_styles/normal = SubResource("StyleBoxFlat_476f4")
+text = "LeaderBoard"
+
+[node name="quitButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 60
+theme_override_styles/focus = SubResource("StyleBoxEmpty_fymoi")
+theme_override_styles/hover = SubResource("StyleBoxFlat_xcmgw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xjkfb")
+theme_override_styles/normal = SubResource("StyleBoxFlat_476f4")
+text = "Quit"
+script = ExtResource("3_8jsu8")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.202
+anchor_right = 0.5
+anchor_bottom = 0.202
+offset_left = -229.5
+offset_top = -1.89601
+offset_right = 228.5
+offset_bottom = 66.104
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 49
+text = "Spell Sprint"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="leaderboard" parent="." instance=ExtResource("1_eg2si")]
+visible = false
+layout_mode = 1
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+offset_left = -2.0
+offset_right = 1151.0
+offset_bottom = 648.0
+size_flags_horizontal = 0
+size_flags_vertical = 4
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer"]
+libraries = {
+&"": SubResource("AnimationLibrary_opfnp")
+}
+autoplay = "Fade_to_Normal"
+
+[connection signal="pressed" from="VBoxContainer/playButton" to="VBoxContainer/playButton" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/leaderboardButton" to="." method="_on_leaderboard_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/quitButton" to="VBoxContainer/quitButton" method="_on_pressed"]

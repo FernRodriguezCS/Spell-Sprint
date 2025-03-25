@@ -1,0 +1,75 @@
+[gd_scene load_steps=8 format=3 uid="uid://bflxiikgbqpii"]
+
+[ext_resource type="Script" uid="uid://df4o2ww3eqo5d" path="res://Scripts/death.gd" id="1_lf77f"]
+[ext_resource type="PackedScene" uid="uid://bygqq1wlxiek7" path="res://Scenes/player.tscn" id="1_qemge"]
+[ext_resource type="Texture2D" uid="uid://b4447hnvhn1xo" path="res://Asetts/sprites/light_beam.png" id="2_f0m10"]
+[ext_resource type="Script" uid="uid://cdlpywm8wvyrf" path="res://Scripts/darken.gd" id="3_531me"]
+[ext_resource type="Texture2D" uid="uid://buk0mmau24e4u" path="res://Asetts/sprites/curtain.png" id="3_4868a"]
+[ext_resource type="PackedScene" uid="uid://dlyye1ek1tlye" path="res://Scenes/audio_stream_player_2d.tscn" id="6_066rk"]
+[ext_resource type="PackedScene" uid="uid://cxyc70okerjdf" path="res://Scenes/enter_name.tscn" id="7_xejl3"]
+
+[node name="death" type="Node2D"]
+script = ExtResource("1_lf77f")
+
+[node name="darken" type="ColorRect" parent="."]
+offset_left = -571.0
+offset_top = -405.0
+offset_right = 574.0
+offset_bottom = 231.0
+color = Color(0, 0, 0, 1)
+
+[node name="light" type="Sprite2D" parent="."]
+position = Vector2(32.75, -88.9885)
+rotation = 0.628319
+scale = Vector2(0.969905, 0.805218)
+texture = ExtResource("2_f0m10")
+
+[node name="Player" parent="." instance=ExtResource("1_qemge")]
+
+[node name="curtain" type="Sprite2D" parent="."]
+position = Vector2(934, -80.5)
+scale = Vector2(0.712958, 0.550934)
+texture = ExtResource("3_4868a")
+script = ExtResource("3_531me")
+
+[node name="curtain2" type="Sprite2D" parent="."]
+position = Vector2(-915, -79)
+scale = Vector2(-0.713, 0.553321)
+texture = ExtResource("3_4868a")
+script = ExtResource("3_531me")
+
+[node name="score" type="Button" parent="."]
+offset_left = -53.0
+offset_top = 107.0
+offset_right = 55.0
+offset_bottom = 138.0
+text = "Leaderboard"
+
+[node name="exit" type="Button" parent="."]
+offset_left = -53.0
+offset_top = 169.0
+offset_right = 55.0
+offset_bottom = 200.0
+text = "Menu"
+
+[node name="click_to_continue" type="RichTextLabel" parent="."]
+self_modulate = Color(1, 1, 1, 0.317647)
+offset_left = -69.0
+offset_top = 36.0
+offset_right = 92.0
+offset_bottom = 75.0
+text = "click to continue"
+scroll_active = false
+
+[node name="MainMenuMusic" parent="." instance=ExtResource("6_066rk")]
+
+[node name="enter_name" parent="." instance=ExtResource("7_xejl3")]
+offset_left = 6.0
+offset_top = -1.0
+offset_right = 6.0
+offset_bottom = -1.0
+
+[connection signal="child_entered_tree" from="." to="Player" method="_on_death_child_entered_tree"]
+[connection signal="pressed" from="score" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="score" to="." method="_on_score_pressed"]
+[connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]

@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://is3w2w5q8wmr"]
+
+[ext_resource type="Texture2D" uid="uid://c8d3ayii401gp" path="res://Asetts/Player/playeridle.png" id="1_afqje"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(6, 1)
+texture = ExtResource("1_afqje")
+hframes = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]

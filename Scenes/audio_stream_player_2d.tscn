@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dlyye1ek1tlye"]
+
+[ext_resource type="AudioStream" uid="uid://g8odv83i5fl7" path="res://Asetts/ways-of-the-wizard-197105.mp3" id="1_kajln"]
+
+[node name="MainMenuMusic" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_kajln")
+volume_db = -0.27
+autoplay = true

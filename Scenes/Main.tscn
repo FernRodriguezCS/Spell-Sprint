@@ -1,0 +1,35 @@
+[gd_scene load_steps=8 format=3 uid="uid://c83gvg88383ii"]
+
+[ext_resource type="PackedScene" uid="uid://cxyc70okerjdf" path="res://Scenes/enter_name.tscn" id="1_kln2b"]
+[ext_resource type="Script" uid="uid://nkpbrsrtgy7i" path="res://Scripts/typing_manager.gd" id="1_pbw6q"]
+[ext_resource type="PackedScene" uid="uid://busrxrxo360ay" path="res://Scenes/tile_map.tscn" id="1_qh3mr"]
+[ext_resource type="PackedScene" uid="uid://bygqq1wlxiek7" path="res://Scenes/player.tscn" id="2_3g3k3"]
+[ext_resource type="PackedScene" uid="uid://bjibfs55i7vgh" path="res://Scenes/enemy_red.tscn" id="4_rgh2o"]
+[ext_resource type="PackedScene" uid="uid://ccuh24a03ypty" path="res://Scenes/pause_menu.tscn" id="6_v1gob"]
+[ext_resource type="PackedScene" uid="uid://dq0jeio7mwoiv" path="res://Scenes/enemy_spawner.tscn" id="7_jw32o"]
+
+[node name="Main" type="Node2D"]
+
+[node name="TypingManager" type="Node" parent="."]
+script = ExtResource("1_pbw6q")
+
+[node name="TileMap" parent="." instance=ExtResource("1_qh3mr")]
+position = Vector2(11, -164)
+
+[node name="enter_name" parent="." instance=ExtResource("1_kln2b")]
+offset_left = 694.611
+offset_top = 748.511
+offset_right = 694.611
+offset_bottom = 748.511
+
+[node name="Player" parent="." instance=ExtResource("2_3g3k3")]
+
+[node name="Enemy_RED" parent="." instance=ExtResource("4_rgh2o")]
+position = Vector2(-682, -43)
+
+[node name="PauseMenu Layer" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="PauseMenu Layer" instance=ExtResource("6_v1gob")]
+
+[node name="enemy_spawner" parent="." instance=ExtResource("7_jw32o")]
+position = Vector2(-318, 298)

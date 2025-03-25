@@ -1,0 +1,41 @@
+{
+  "easy": [
+	"apple", "ape", "orange", "grape", "lemon", "lent", "peach", "melon", "berry", "plum",
+	"stop", "potato", "onion", "lint", "step", "one", "two", "grit", "tomato", "top",
+	"happy", "smile", "laugh", "enjoy", "fun", "play", "game", "dance", "sing", "music",
+	"cloud", "rain", "storm", "sunny", "windy", "lie", "snow", "cold", "warm", "chill",
+	"pole", "buddy", "pal", "mate", "group", "team", "family", "sip", "tip", "green",
+	"house", "home", "room", "beep", "sit", "garage", "attic", "closet", "red", "pull",
+	"drive", "walk", "run", "jump", "skip", "hop", "crawl", "climb", "dance", "sprint",
+	"fun", "silly", "crazy", "happy", "lucky", "joyful", "top", "quiet", "calm", "kind",
+	"paper", "chair", "eraser", "book", "story", "blue", "page", "line", "rent", "runt",
+	"ocean", "beach", "river", "lake", "pond", "wave", "tide", "breeze", "mist", "cloud",
+	"part", "rip", "cake", "gift", "grip", "candle", "music", "song", "dance", "guest",
+	"chair", "table", "go", "lamp", "shelf", "dresser", "mirror", "clock", "rug", "pillow",
+	"school", "class", "lesson", "student", "dad", "ok", "desk", "plop", "ruler", "board",
+	"cat", "dog", "bird", "fish", "frog", "turtle", "mouse", "kill", "lizard", "mom",
+	"fly", "tin", "tree", "bush", "leaf", "bloom", "taunt", "rose", "daisy", "tulip",
+	"line", "ten", "trip", "gun", "tent", "hotel", "car", "bus", "train", "plane"
+  ],
+  "medium": [
+	"blackout", "comfortable", "courageous", "defeatedly", "destinations", "embrace", "fortune", "harmony", "inspire", "journey",
+	"kindness", "liberty", "mystery", "nurture", "passion", "qualities", "reverie", "serenity", "triumph", "victory",
+	"wisdom", "zeal", "advice", "believing", "cancerous", "devotees", "elegant", "freedom", "gesture", "truthfullness",
+	"insightfulness", "justifiably", "leisure", "morally", "notable", "observe", "pioneer", "question", "reliable", "sensibilities",
+	"tension", "uplifted", "venture", "whispering", "yearning", "zealous", "alchemy", "balancing", "clarity", "delightfulness",
+	"excited", "fragrant", "glimmer", "hospice", "intrigue", "joyfully", "kindreds", "serendipity", "mindfulness", "novelties",
+	"outcome", "patient", "quicken", "remedy", "shelter", "trusting", "vibrant", "wonderful", "blunderbuss", "zestful",
+	"absolve", "ascend", "barrage", "beguile", "bountiful", "clemency", "coherent", "contrive", "delicate", "dignified",
+	"elusive", "endear", "feasible", "frivolous", "graciously", "heretic", "imparting", "indulge", "jovial", "kindred"
+  ],
+  "hard": [
+	"aberration", "abstention", "acquiescent", "adversarial", "aesthetically", "affluently", "alacritous", "ambivalence", "anachronistic", "analogously", 
+	"anecdotally", "animosities", "antagonistic", "arbitrarily", "ascertainable", "assimilative", "authenticity", "autonomous", "avariciously", "belligerently", 
+	"benevolently", "boisterously", "bravadoes", "cacophonous", "camaraderie", "capriciously", "catalytic", "cathartically", "circumvention", "clandestinely", 
+	"coalescence", "cognizantly", "commensurable", "compendiums", "complacently", "conflagrations", "connoisseurship", "consensually", "contentiousness", "contritely", 
+	"copiousness", "corroborative", "deleteriously", "delineation", "demagogically", "derivatively", "despotically", "dichotomous", "didactically", "diligently", 
+	"disparagement", "disparately", "dissonances", "divergently", "dogmatically", "ebulliently", "effervescence", "elucidations", "empirically", "enervations", 
+	"ephemerally", "equivocation", "exacerbations", "exorbitantly", "facetiously", "fortuitously", "gregariously", "heinousness", "idiosyncratic", "incongruously", 
+	"ineffability", "insidiously", "intrepidness", "juxtaposition", "languishingly", "magnanimously", "mendaciously", "nefariously", "obfuscations", "ostentatiously"
+  ]
+}

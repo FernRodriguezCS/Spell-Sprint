@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://bcn8mujsgwqt"]
+
+[node name="Transition_Screen" type="CanvasLayer"]

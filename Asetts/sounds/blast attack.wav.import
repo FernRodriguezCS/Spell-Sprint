@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bxdjmf8ta02ui"
+path="res://.godot/imported/blast attack.wav-feaf7c26d61cc3d2ad185f0e792e19e6.sample"
+
+[deps]
+
+source_file="res://Asetts/sounds/blast attack.wav"
+dest_files=["res://.godot/imported/blast attack.wav-feaf7c26d61cc3d2ad185f0e792e19e6.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

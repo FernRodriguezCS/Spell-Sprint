@@ -1,0 +1,79 @@
+[gd_scene load_steps=4 format=3 uid="uid://isuqghpnvvtr"]
+
+[ext_resource type="PackedScene" uid="uid://bygqq1wlxiek7" path="res://Scenes/player.tscn" id="1_rpl8v"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_0r3d3"]
+size = Vector2(100, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i8tfn"]
+size = Vector2(100, 28)
+
+[node name="stage 1" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_rpl8v")]
+position = Vector2(509, 449)
+
+[node name="platform" type="StaticBody2D" parent="."]
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="platform"]
+position = Vector2(498, 509)
+mesh = SubResource("QuadMesh_0r3d3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="platform"]
+position = Vector2(498, 509)
+shape = SubResource("RectangleShape2D_i8tfn")
+
+[node name="platform2" type="StaticBody2D" parent="."]
+position = Vector2(97, -31)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="platform2"]
+position = Vector2(498, 509)
+mesh = SubResource("QuadMesh_0r3d3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="platform2"]
+position = Vector2(498.5, 509)
+shape = SubResource("RectangleShape2D_i8tfn")
+
+[node name="platform3" type="StaticBody2D" parent="."]
+position = Vector2(200, -63)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="platform3"]
+position = Vector2(498, 509)
+mesh = SubResource("QuadMesh_0r3d3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="platform3"]
+position = Vector2(498.5, 509)
+shape = SubResource("RectangleShape2D_i8tfn")
+
+[node name="platform4" type="StaticBody2D" parent="."]
+position = Vector2(303, -40)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="platform4"]
+position = Vector2(498, 509)
+mesh = SubResource("QuadMesh_0r3d3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="platform4"]
+position = Vector2(498.5, 509)
+shape = SubResource("RectangleShape2D_i8tfn")
+
+[node name="platform5" type="StaticBody2D" parent="."]
+position = Vector2(404, -40)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="platform5"]
+position = Vector2(498, 509)
+mesh = SubResource("QuadMesh_0r3d3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="platform5"]
+position = Vector2(498.5, 509)
+shape = SubResource("RectangleShape2D_i8tfn")
+
+[node name="platform6" type="StaticBody2D" parent="."]
+position = Vector2(504, -40)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="platform6"]
+position = Vector2(498, 509)
+mesh = SubResource("QuadMesh_0r3d3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="platform6"]
+position = Vector2(498.5, 509)
+shape = SubResource("RectangleShape2D_i8tfn")
